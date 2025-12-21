@@ -52,6 +52,32 @@
       "relation": "manyToOne",
       "target": "api::collection.collection",
       "inversedBy": "products"
+    },
+    "old_price": {
+      "type": "decimal"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "attributes": {
+      "type": "json"
+    },
+    "in_stock": {
+      "type": "boolean"
+    },
+    "is_featured": {
+      "type": "boolean"
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.shared-seo",
+      "repeatable": true
     }
   }
 }
