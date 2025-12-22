@@ -78,6 +78,29 @@
       "type": "component",
       "component": "seo.shared-seo",
       "repeatable": true
+    },
+    "sizes": {
+      "type": "enumeration",
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "ONE_SIZE"
+      ]
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "complete_looks"
+    },
+    "complete_looks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "products"
     }
   }
 }

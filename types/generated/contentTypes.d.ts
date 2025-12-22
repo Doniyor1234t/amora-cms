@@ -521,6 +521,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::collection.collection'
     >;
+    complete_looks: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::product.product'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -542,9 +546,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     old_price: Schema.Attribute.Decimal;
     price: Schema.Attribute.Decimal;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'seo.shared-seo', true>;
     shortDescription: Schema.Attribute.String;
+    sizes: Schema.Attribute.Enumeration<
+      ['XS', 'S', 'M', 'L', 'XL', 'ONE_SIZE']
+    >;
     sku: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
