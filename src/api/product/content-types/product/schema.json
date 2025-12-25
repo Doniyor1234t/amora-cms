@@ -101,6 +101,12 @@
       "relation": "manyToMany",
       "target": "api::product.product",
       "mappedBy": "products"
+    },
+    "banners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::banner.banner",
+      "mappedBy": "products"
     }
   }
 }

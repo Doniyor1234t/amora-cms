@@ -49,6 +49,12 @@
       "relation": "oneToMany",
       "target": "api::product.product",
       "mappedBy": "collection"
+    },
+    "banners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::banner.banner",
+      "mappedBy": "collections"
     }
   }
 }
