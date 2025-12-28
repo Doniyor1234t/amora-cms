@@ -112,6 +112,12 @@
       "type": "component",
       "component": "product.product-variant",
       "repeatable": true
+    },
+    "care": {
+      "type": "text"
+    },
+    "material": {
+      "type": "text"
     }
   }
 }

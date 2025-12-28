@@ -567,6 +567,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   attributes: {
     attributes: Schema.Attribute.JSON;
     banners: Schema.Attribute.Relation<'manyToMany', 'api::banner.banner'>;
+    care: Schema.Attribute.Text;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     collection: Schema.Attribute.Relation<
       'manyToOne',
@@ -594,6 +595,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    material: Schema.Attribute.Text;
     name: Schema.Attribute.String;
     old_price: Schema.Attribute.Decimal;
     price: Schema.Attribute.Decimal;
