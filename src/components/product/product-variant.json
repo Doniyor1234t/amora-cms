@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_product_product_variants",
+  "info": {
+    "displayName": "ProductVariant"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::size.size"
+    },
+    "sku": {
+      "type": "string",
+      "unique": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "isAvailable": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    },
+    "color": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "weight": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

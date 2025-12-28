@@ -77,7 +77,7 @@
     "seo": {
       "type": "component",
       "component": "seo.shared-seo",
-      "repeatable": true
+      "repeatable": false
     },
     "sizes": {
       "type": "enumeration",
@@ -107,6 +107,11 @@
       "relation": "manyToMany",
       "target": "api::banner.banner",
       "mappedBy": "products"
+    },
+    "variants": {
+      "type": "component",
+      "component": "product.product-variant",
+      "repeatable": true
     }
   }
 }
