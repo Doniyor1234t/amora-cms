@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_ctas",
+  "info": {
+    "displayName": "cta"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "banners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::banner.banner"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "two-column",
+        "grid",
+        "carousel"
+      ]
+    }
+  },
+  "config": {}
+}

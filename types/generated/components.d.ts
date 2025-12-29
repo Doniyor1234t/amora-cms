@@ -27,6 +27,18 @@ export interface ProductProductVariant extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionCta extends Struct.ComponentSchema {
+  collectionName: 'components_section_ctas';
+  info: {
+    displayName: 'cta';
+  };
+  attributes: {
+    banners: Schema.Attribute.Relation<'oneToMany', 'api::banner.banner'>;
+    layout: Schema.Attribute.Enumeration<['two-column', 'grid', 'carousel']>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SeoSharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_seo_shared_seos';
   info: {
@@ -56,6 +68,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'product.product-variant': ProductProductVariant;
+      'section.cta': SectionCta;
       'seo.shared-seo': SeoSharedSeo;
     }
   }
